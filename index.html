@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>massage for good</title>
+<style>
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.body{
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:darkslategray;
+}
+.main1{
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.margin {
+    margin-left: 1  0px;
+}
+.header{
+    width: inherit;
+    line-height: 30px;
+    background-color: lightblue;
+    color: aliceblue;
+    border: 1px solid lightblue;
+}
+.name{
+    margin-right: 5px;
+    text-align: right;
+}
+.display{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 200px;
+    height:128px ;
+    border: 1px solid black;
+    outline: none;
+}
+input{
+    width: 198px;
+}
+.main11{
+    display: flex;
+    justify-content: center;
+}
+.display1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 200px;
+    height:128px ;
+    border: 1px solid black;
+    outline: none;
+}
+
+</style> 
+</head>
+<body>
+    <div class="main1">
+        <div class="containt">
+            <div class="margin">
+                <div class="header">
+                    <div class="img">
+                        <div class="name"><p>shana</p></div>
+                    </div>
+                </div>
+                <div class="display">
+                </div>
+                <div class="inputMassage">
+                    <form name="massage"></form>
+                    <input type="text"  placeholder="write massage" class="mass"><button onclick="send()">Send</button></div>
+            </div>
+        </div>
+
+    </div>
+  <div class="main11">  <div class="main1">
+    <div class="containt">
+        <div class="margin">
+            <div class="header">
+                <div class="img">
+                    <div class="name"><p>rahul</p></div>
+                </div>
+            </div>
+                 <div class="display1">
+                </div>
+            <div class="inputMassage">
+                <form name="massage"></form>
+                <input type="text"  placeholder="write massage" class="mass1"><button onclick="send1()">Send</button></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        function send(){
+            var rahul=document.querySelector(".mass").value;
+            document.querySelector(".display1").innerHTML=`shana ->${rahul}`;
+            document.querySelector(".mass").value="";
+
+            document.querySelector(".display").innerHTML=`Me ->${rahul}`;
+            document.querySelector(".display").style.text  = "right";
+        }
+        function send1(){
+
+            var shana=document.querySelector(".mass1").value;
+            document.querySelector(".display1").innerHTML=`Me->${shana}`;
+            document.querySelector(".mass1").value="";
+            document.querySelector(".display").innerHTML=`Rahul ->${shana}`;
+            document.querySelector(".display").style.text  = "right";
+        }
+    </script>
+
+</body>
+</html>
